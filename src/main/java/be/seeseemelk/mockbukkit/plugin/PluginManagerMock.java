@@ -59,6 +59,7 @@ import org.bukkit.plugin.java.JavaPluginUtils;
 
 import be.seeseemelk.mockbukkit.ServerMock;
 import be.seeseemelk.mockbukkit.UnimplementedOperationException;
+import org.jetbrains.annotations.NotNull;
 
 public class PluginManagerMock implements PluginManager
 {
@@ -663,6 +664,12 @@ public class PluginManagerMock implements PluginManager
 		{
 			throw new IllegalArgumentException("Not a JavaPlugin");
 		}
+	}
+
+	@Override
+	public void disablePlugin(@NotNull Plugin plugin, boolean closeClassloader) {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
 	}
 
 	@Override

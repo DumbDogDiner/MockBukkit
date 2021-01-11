@@ -18,6 +18,7 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
 import be.seeseemelk.mockbukkit.UnimplementedOperationException;
+import org.jetbrains.annotations.Nullable;
 
 public class InventoryMock implements Inventory
 {
@@ -224,6 +225,13 @@ public class InventoryMock implements Inventory
 		return holder;
 	}
 
+	@Nullable
+	@Override
+	public InventoryHolder getHolder(boolean useSnapshot) {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
 	@Override
 	public ListIterator<ItemStack> iterator()
 	{
@@ -254,6 +262,13 @@ public class InventoryMock implements Inventory
 	@Override
 	public HashMap<Integer, ItemStack> removeItem(ItemStack... items) throws IllegalArgumentException
 	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@NotNull
+	@Override
+	public HashMap<Integer, ItemStack> removeItemAnySlot(@NotNull ItemStack... items) throws IllegalArgumentException {
 		// TODO Auto-generated method stub
 		throw new UnimplementedOperationException();
 	}

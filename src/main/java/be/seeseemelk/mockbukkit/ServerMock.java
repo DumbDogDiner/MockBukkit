@@ -24,6 +24,8 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import be.seeseemelk.mockbukkit.help.HelpMapMock;
+import com.destroystokyo.paper.entity.ai.MobGoals;
+import com.destroystokyo.paper.profile.PlayerProfile;
 import org.apache.commons.lang.Validate;
 import org.bukkit.BanEntry;
 import org.bukkit.BanList;
@@ -105,6 +107,7 @@ import be.seeseemelk.mockbukkit.scoreboard.ScoreboardManagerMock;
 import be.seeseemelk.mockbukkit.tags.TagRegistry;
 import be.seeseemelk.mockbukkit.tags.TagWrapperMock;
 import be.seeseemelk.mockbukkit.tags.TagsMock;
+import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("deprecation")
 public class ServerMock implements Server
@@ -432,6 +435,13 @@ public class ServerMock implements Server
 		return BUKKIT_VERSION;
 	}
 
+	@NotNull
+	@Override
+	public String getMinecraftVersion() {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
 	@Override
 	public Collection<? extends PlayerMock> getOnlinePlayers()
 	{
@@ -499,6 +509,13 @@ public class ServerMock implements Server
 			}
 		}
 		return null;
+	}
+
+	@Nullable
+	@Override
+	public UUID getPlayerUniqueId(@NotNull String playerName) {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
 	}
 
 	@Override
@@ -686,6 +703,12 @@ public class ServerMock implements Server
 	public int getMaxPlayers()
 	{
 		return playerList.getMaxPlayers();
+	}
+
+	@Override
+	public void setMaxPlayers(int maxPlayers) {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
 	}
 
 	@Override
@@ -894,6 +917,12 @@ public class ServerMock implements Server
 	@Override
 	public boolean getGenerateStructures()
 	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public int getMaxWorldSize() {
 		// TODO Auto-generated method stub
 		throw new UnimplementedOperationException();
 	}
@@ -1115,6 +1144,13 @@ public class ServerMock implements Server
 		return new OfflinePlayerMock(name);
 	}
 
+	@Nullable
+	@Override
+	public OfflinePlayer getOfflinePlayerIfCached(@NotNull String name) {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
 	@Override
 	public OfflinePlayer getOfflinePlayer(UUID id)
 	{
@@ -1273,6 +1309,13 @@ public class ServerMock implements Server
 		throw new UnimplementedOperationException();
 	}
 
+	@NotNull
+	@Override
+	public ChunkData createVanillaChunkData(@NotNull World world, int x, int z) {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
 	@Override
 	public BossBar createBossBar(String title, BarColor color, BarStyle style, BarFlag... flags)
 	{
@@ -1283,6 +1326,26 @@ public class ServerMock implements Server
 	@Override
 	public Entity getEntity(UUID uuid)
 	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@NotNull
+	@Override
+	public double[] getTPS() {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@NotNull
+	@Override
+	public long[] getTickTimes() {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public double getAverageTickTime() {
 		// TODO Auto-generated method stub
 		throw new UnimplementedOperationException();
 	}
@@ -1559,6 +1622,71 @@ public class ServerMock implements Server
 	@Override
 	public Spigot spigot()
 	{
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public void reloadPermissions() {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public boolean reloadCommandAliases() {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public boolean suggestPlayerNamesWhenNullTabCompletions() {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@NotNull
+	@Override
+	public String getPermissionMessage() {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@NotNull
+	@Override
+	public PlayerProfile createProfile(@NotNull UUID uuid) {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@NotNull
+	@Override
+	public PlayerProfile createProfile(@NotNull String name) {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@NotNull
+	@Override
+	public PlayerProfile createProfile(@Nullable UUID uuid, @Nullable String name) {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public int getCurrentTick() {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@Override
+	public boolean isStopping() {
+		// TODO Auto-generated method stub
+		throw new UnimplementedOperationException();
+	}
+
+	@NotNull
+	@Override
+	public MobGoals getMobGoals() {
 		// TODO Auto-generated method stub
 		throw new UnimplementedOperationException();
 	}

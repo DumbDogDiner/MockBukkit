@@ -13,6 +13,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import com.destroystokyo.paper.Namespaced;
+import net.md_5.bungee.api.chat.BaseComponent;
+import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
@@ -27,6 +30,8 @@ import com.google.common.collect.Multimap;
 
 import be.seeseemelk.mockbukkit.UnimplementedOperationException;
 import be.seeseemelk.mockbukkit.persistence.PersistentDataContainerMock;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings("deprecation")
 public class ItemMetaMock implements ItemMeta, Damageable {
@@ -90,9 +95,22 @@ public class ItemMetaMock implements ItemMeta, Damageable {
         return displayName;
     }
 
+    @NotNull
+    @Override
+    public BaseComponent[] getDisplayNameComponent() {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
     @Override
     public void setDisplayName(String name) {
         displayName = name;
+    }
+
+    @Override
+    public void setDisplayNameComponent(@Nullable BaseComponent[] component) {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
     }
 
     /**
@@ -177,6 +195,69 @@ public class ItemMetaMock implements ItemMeta, Damageable {
     }
 
     @Override
+    public Set<Material> getCanDestroy() {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
+    @Override
+    public void setCanDestroy(Set<Material> canDestroy) {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
+    @Override
+    public Set<Material> getCanPlaceOn() {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
+    @Override
+    public void setCanPlaceOn(Set<Material> canPlaceOn) {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
+    @NotNull
+    @Override
+    public Set<Namespaced> getDestroyableKeys() {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
+    @Override
+    public void setDestroyableKeys(@NotNull Collection<Namespaced> canDestroy) {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
+    @NotNull
+    @Override
+    public Set<Namespaced> getPlaceableKeys() {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
+    @NotNull
+    @Override
+    public void setPlaceableKeys(@NotNull Collection<Namespaced> canPlaceOn) {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
+    @Override
+    public boolean hasPlaceableKeys() {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
+    @Override
+    public boolean hasDestroyableKeys() {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
+    @Override
     public boolean hasLore() {
         return lore != null;
     }
@@ -186,9 +267,22 @@ public class ItemMetaMock implements ItemMeta, Damageable {
         return new ArrayList<>(lore);
     }
 
+    @Nullable
+    @Override
+    public List<BaseComponent[]> getLoreComponents() {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
+    }
+
     @Override
     public void setLore(List<String> lore) {
         this.lore = new ArrayList<>(lore);
+    }
+
+    @Override
+    public void setLoreComponents(@Nullable List<BaseComponent[]> lore) {
+        // TODO Auto-generated method stub
+        throw new UnimplementedOperationException();
     }
 
     /**
